@@ -1,0 +1,6 @@
+[submodule "multibuild"]
+	path = multibuild
+	url = https://github.com/matthew-brett/multibuild.git
+[submodule "fury"]
+	path = fury
+	url = https://github.com/fury-gl/fury.git
