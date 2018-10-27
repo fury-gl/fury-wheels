@@ -1,8 +1,8 @@
 # FURY wheels
 
-This repository automates [FURY](https://github.com/fury-gl/fury) wheel building using [multibuild](https://github.com/matthew-brett/multibuild), [Travis CI](https://travis-ci.org/fury-gl/fury-wheels)
+This repository automates [FURY](https://github.com/fury-gl/fury) wheel building using [multibuild](https://github.com/matthew-brett/multibuild), [Travis CI](https://travis-ci.com/fury-gl/fury-wheels)
 
-[![Build Status](https://travis-ci.org/fury-gl/fury-wheels.svg?branch=master)](https://travis-ci.org/fury-gl/fury-wheels)
+[![Build Status](https://travis-ci.com/fury-gl/fury-wheels.svg?branch=master)](https://travis-ci.com/fury-gl/fury-wheels)
 
 
 How it works
