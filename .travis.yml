@@ -5,6 +5,9 @@ env:
       - PLAT=x86_64
       - UNICODE_WIDTH=32
       - WHEELHOUSE_UPLOADER_USERNAME=travis-worker
+      - TEST_WITH_XVFB=true
+      - LIBGL_ALWAYS_INDIRECT=y
+      - MESA_GL_VERSION_OVERRIDE=3.3
 
 
 language: python
@@ -14,6 +17,35 @@ sudo: required
 dist: trusty
 services: docker
 
+addons:
+  apt:
+    sources:
+    - sourceline: ppa:ubuntu-x-swat/updates
+    - sourceline: ppa:oibaf/graphics-drivers
+    update: true
+    packages:
+    - libglew-dev
+    - freeglut3-dev
+    - libxi-dev
+    - libxmu-dev
+    - xorg-dev
+    - libgl1-mesa-dev
+    - libgl1-mesa-glx
+    - libglapi-mesa
+    - libgl1-mesa-dri
+    - libgbm1
+    - libxatracker-dev
+    - libxcursor-dev
+    - libpulse-dev
+    - libxinerama-dev
+    - libxrandr-dev
+    - libxv-dev
+    - libasound2-dev
+    - libudev-dev
+    - mesa-utils
+    - mesa-common-dev
+    - libllvm7
+    - xvfb
 matrix:
   exclude:
       # Exclude the default Python 3.5 build
@@ -82,9 +114,11 @@ matrix:
       language: generic
       env:
         - MB_PYTHON_VERSION=3.7
+  allow_failures:
+    - os: osx
 
 before_install:
-    - TEST_DEPENDS="numpy scipy vtk nose pytest dipy"
+    - TEST_DEPENDS="numpy scipy vtk nose pytest dipy xvfbwrapper"
     - source multibuild/common_utils.sh
     - source multibuild/travis_steps.sh
     - before_install
