@@ -1,7 +1,7 @@
 env:
   global:
       - REPO_DIR=fury
-      - BUILD_COMMIT=5549307
+      - BUILD_COMMIT=v0.1.4
       - PLAT=x86_64
       - UNICODE_WIDTH=32
       - WHEELHOUSE_UPLOADER_USERNAME=travis-worker
