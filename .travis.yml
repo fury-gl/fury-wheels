@@ -44,7 +44,6 @@ addons:
     - libudev-dev
     - mesa-utils
     - mesa-common-dev
-    - libllvm7
     - xvfb
 matrix:
   exclude:
