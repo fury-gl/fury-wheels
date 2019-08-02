@@ -1,7 +1,7 @@
 env:
   global:
       - REPO_DIR=fury
-      - BUILD_COMMIT=v0.1.4
+      - BUILD_COMMIT=v0.3.0
       - PLAT=x86_64
       - UNICODE_WIDTH=32
       - WHEELHOUSE_UPLOADER_USERNAME=travis-worker
@@ -12,7 +12,7 @@ env:
 
 language: python
 # Default Python version is usually 2.7
-python: 3.5
+python: 3.6
 sudo: required
 dist: xenial
 services: docker
@@ -68,13 +68,6 @@ matrix:
         - UNICODE_WIDTH=16
     - os: linux
       env:
-        - MB_PYTHON_VERSION=3.4
-    - os: linux
-      env:
-        - MB_PYTHON_VERSION=3.4
-        - PLAT=i686
-    - os: linux
-      env:
         - MB_PYTHON_VERSION=3.5
     - os: linux
       env:
@@ -97,10 +90,6 @@ matrix:
     - os: osx
       language: generic
       env: MB_PYTHON_VERSION=2.7
-    - os: osx
-      language: generic
-      env:
-        - MB_PYTHON_VERSION=3.4
     - os: osx
       language: generic
       env:
