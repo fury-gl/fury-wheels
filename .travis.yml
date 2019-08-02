@@ -8,6 +8,7 @@ env:
       - TEST_WITH_XVFB=true
       - LIBGL_ALWAYS_INDIRECT=y
       - MESA_GL_VERSION_OVERRIDE=3.3
+      - DISPLAY=:99
 
 
 language: python
